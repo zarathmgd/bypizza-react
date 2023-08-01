@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:wght@200;300;400;500&display=swap");
+
+:root {
+  --pure-gold: rgba(186, 150, 59, 1);
+  --eighty-gold: rgba(186, 150, 59, 0.8);
+  --loaderbar-grey: rgba(24, 23, 27, 1);
+  --texture-bg-grey: rgba(24, 23, 27, 0.5);
+  --h2-fontsize: 4.2vw;
+  --h3-fontsize: 2.7vw;
+  --caveat: "Caveat brush", cursive;
+  --montserrat: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+.loader img {
+  position: relative;
+  width: 20vmin;
+  height: 20vmin;
+  animation: rotate 3s linear infinite;
+}
+
+.loading-bar {
+  position: relative;
+  width: 22vmin;
+  height: 1.5vmin;
+  background: var(--loaderbar-grey);
+  border-radius: 50px;
+}
+
+.loading-bar-track {
+  height: 100%;
+  border-radius: 50px;
+  background: var(--pure-gold);
+}
+
+.loader p {
+  margin-top: 1vmin;
+  text-align: center;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+p {
+  font-family: var(--montserrat);
+  font-size: 1.2vw;
+  word-spacing: 0.5em;
+}
+
+h2 {
+  font-family: var(--caveat);
+  font-weight: 100;
+}
+
+.firstpage {
+  width: 100%;
+  height: 100vmin;
+  background-image: url("assets/pizza-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.firstpage-content {
+  position: relative;
+  top: 25%;
+  left: 25%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 36.5%;
+  color: #fff;
+}
+
+.firstpage-content h1 {
+  font-family: var(--caveat);
+  font-weight: 100;
+  font-size: 10.4vw;
+}
+
+.firstpage-content p {
+  font-size: 1.2vw;
+  text-align: right;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15%;
+}
+
+.button-container button {
+  padding: 1vw 3vw;
+  background: none;
+  border-radius: 50px;
+  border: 3px solid var(--pure-gold);
+  font-size: 1.3vw;
+  color: var(--pure-gold);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button-container a:nth-child(1) button {
+  padding: 1vw 3.55vw;
+  color: #fff;
+  border: none;
+  background-color: var(--eighty-gold);
+}
+
+.button-container a button:hover {
+  background-color: var(--pure-gold);
+  color: #fff;
+}
+
+.secondpage {
+  position: relative;
+  width: 100%;
+  height: 80vmin;
+  display: flex;
+  align-items: center;
+}
+
+.infos-container {
+  position: relative;
+  left: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25vw;
+  height: 65vmin;
+  border-radius: 20px;
+  background-image: url("assets/grey-marble-texture.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  z-index: -2;
+  gap: 6%;
+  aspect-ratio: 1 / 1;
+}
+
+.infos-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: var(--texture-bg-grey);
+  z-index: -1;
+}
+
+.infos-container p {
+  font-weight: bold;
+  font-size: 1.3vw;
+  display: flex;
+  align-items: center;
+}
+
+.infos-container p span {
+  font-family: "Caveat brush";
+  font-size: 6.5vw;
+  color: var(--pure-gold);
+  margin-right: 10%;
+}
+
+.secondpage h2 {
+  position: absolute;
+  top: 1%;
+  right: 1.5%;
+  font-family: "Caveat brush";
+  font-size: var(--h2-fontsize);
+  font-weight: 100;
+}
+
+.secondpage-content-container {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  left: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.secondpage-content {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  width: 100%;
+  height: 30%;
+}
+
+.secondpage-content span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  border: 3px solid var(--pure-gold);
+  border-radius: 40px;
+  background-image: url("assets/grey-marble-texture.png");
+  color: var(--pure-gold);
+  font-size: 4vw;
+  z-index: -2;
+}
+
+.secondpage-content span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.secondpage-content span::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.secondpage-content p {
+  font-size: 1vw;
+  text-align: justify;
+}
+
+.thirdpage {
+  position: relative;
+  width: 100%;
+}
+
+.thirdpage h2 {
+  width: 100%;
+  padding: 0.5% 0;
+  position: relative;
+  text-align: center;
+  font-family: "Caveat brush";
+  font-size: var(--h2-fontsize);
+  font-weight: 100;
+  color: #fff;
+  background: url("assets/grey-marble-texture.png");
+  z-index: 1;
+}
+
+.thirdpage h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.thirdpage-content-container {
+  width: 85%;
+  position: relative;
+  left: 50%;
+  top: 12%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  gap: 12%;
+}
+
+.thirdpage-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3vmin;
+}
+
+.thirdpage-content h3 {
+  font-family: "Caveat brush";
+  font-size: var(--h3-fontsize);
+  font-weight: 100;
+  text-align: center;
+}
+
+.meal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vmin;
+}
+
+.meal h4 {
+  font-family: var(--montserrat);
+  font-size: 1.1vw;
+  font-weight: 400;
+}
+
+.meal p {
+  color: var(--pure-gold);
+  font-size: 0.9vw;
+}
+
+.thirdpage-content-container hr {
+  border: 1px solid black;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 60vmin;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: url("assets/grey-marble-texture-footer.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  color: #fff;
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+footer h2 {
+  position: relative;
+  top: 10%;
+  font-size: var(--h2-fontsize);
+  color: #fff;
+}
+
+.footer-content {
+  width: 90%;
+  position: relative;
+  top: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.socialmedias {
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.socialmedias .icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-brands {
+  color: var(--pure-gold);
+  font-size: 3vw;
+  cursor: pointer;
+}
+
+.informations {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8vmin;
+}
+
+.informations i {
+  font-size: 3vw;
+  color: var(--pure-gold);
+}
+
+.hours,
+.locations {
+  display: flex;
+  gap: 2vmin;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8vmin;
+}
+
+footer hr {
+  width: 95%;
+  position: absolute;
+  top: 85%;
+}
+
+.rights {
+  width: 95%;
+  position: absolute;
+  top: 90.5%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 200;
+}
+
+@media screen and (min-width: 1001px) {
+  .thirdpage {
+    height: 43vmax;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .thirdpage {
+    height: 50vmin;
+  }
+
+  footer {
+    height: 40vmin;
+  }
+
+  .secondpage {
+    height: 50vmin;
+  }
+
+  .infos-container {
+    height: 35vmin;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .thirdpage {
+    height: 50vmax;
+  }
+}
