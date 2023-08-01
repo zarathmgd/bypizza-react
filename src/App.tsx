@@ -18,7 +18,7 @@ function App() {
 
     setInterval(() => {
       setLoaderTracker(loaderTracker++);
-    }, 80);
+    }, 40);
   }, []);
 
   return (
